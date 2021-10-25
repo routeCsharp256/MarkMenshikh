@@ -1,0 +1,34 @@
+﻿syntax = "proto3";
+option csharp_namespace = "MerchandiseService.Grpc";
+package MerchandiseService;
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/wrappers.proto";
+
+service MerchandiseServiceGrpc {
+  rpc GetMerchPack (GetMerchPackRequest) returns (GetMerchPackResponse);
+  rpc GetEmployeePacks (GetEmployeePacksRequest) returns (GetEmployeePacksResponse);
+}
+
+message GetMerchPackRequest {
+  int32 id = 1;
+}
+
+message GetEmployeePacksRequest {
+  int32 id = 1;
+}
+
+message MerchPack {
+  int64 item_id = 1;
+  string item_name = 2;
+}
+
+message GetMerchPackResponse {
+  MerchPack merch_pack = 1;
+}
+
+message GetEmployeePacksResponse {
+  repeated MerchPack merch_packs =  1;
+}
+
+
