@@ -1,6 +1,6 @@
 ﻿namespace MerchandiseService.Api.Models
 {
-    public class MerchItem
+    public readonly struct MerchItem
     {
         public MerchItem(long itemId, string itemName)
         {
