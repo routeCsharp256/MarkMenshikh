@@ -17,7 +17,13 @@ ProjectSection(SolutionItems) = preProject
 	deploy\docker-compose.yml = deploy\docker-compose.yml
 EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MerchandiseService", "src\MerchandiseService\MerchandiseService.csproj", "{A8AD7B39-40ED-441E-B54E-DA81EAB2560F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MerchandiseService.Api", "src\MerchandiseService.Api\MerchandiseService.Api.csproj", "{A8AD7B39-40ED-441E-B54E-DA81EAB2560F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MerchandiseService.Grpc", "src\MerchandiseService.Grpc\MerchandiseService.Grpc.csproj", "{B92E68B0-147F-491E-8270-028E273DBC58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MerchandiseService.HttpClient", "src\MerchandiseService.HttpClient\MerchandiseService.HttpClient.csproj", "{D9199841-3BFF-4FE9-ACAD-34C46B61BE1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MerchandiseService.HttpModels", "src\MerchandiseService.HttpModels\MerchandiseService.HttpModels.csproj", "{E0D5E581-6B51-4432-A185-313EB7F3F353}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,11 +32,26 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A8AD7B39-40ED-441E-B54E-DA81EAB2560F} = {48449149-2589-4D21-94F3-CCF591E5DA32}
+		{B92E68B0-147F-491E-8270-028E273DBC58} = {48449149-2589-4D21-94F3-CCF591E5DA32}
+		{D9199841-3BFF-4FE9-ACAD-34C46B61BE1E} = {48449149-2589-4D21-94F3-CCF591E5DA32}
+		{E0D5E581-6B51-4432-A185-313EB7F3F353} = {48449149-2589-4D21-94F3-CCF591E5DA32}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A8AD7B39-40ED-441E-B54E-DA81EAB2560F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A8AD7B39-40ED-441E-B54E-DA81EAB2560F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8AD7B39-40ED-441E-B54E-DA81EAB2560F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8AD7B39-40ED-441E-B54E-DA81EAB2560F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B92E68B0-147F-491E-8270-028E273DBC58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B92E68B0-147F-491E-8270-028E273DBC58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B92E68B0-147F-491E-8270-028E273DBC58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B92E68B0-147F-491E-8270-028E273DBC58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9199841-3BFF-4FE9-ACAD-34C46B61BE1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9199841-3BFF-4FE9-ACAD-34C46B61BE1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9199841-3BFF-4FE9-ACAD-34C46B61BE1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9199841-3BFF-4FE9-ACAD-34C46B61BE1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0D5E581-6B51-4432-A185-313EB7F3F353}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0D5E581-6B51-4432-A185-313EB7F3F353}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0D5E581-6B51-4432-A185-313EB7F3F353}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0D5E581-6B51-4432-A185-313EB7F3F353}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

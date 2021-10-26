@@ -1,11 +1,12 @@
+using MerchandiseService.Api.GrpcServices;
+using MerchandiseService.Api.Infrastructure.Interceptors;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.AspNetCore.Http;
 
-namespace MerchandiseService
+namespace MerchandiseService.Api
 {
     public class Startup
     {
@@ -19,6 +20,8 @@ namespace MerchandiseService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
+            services.AddGrpc(options => options.Interceptors.Add<LoggingInterceptor>());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -33,10 +36,8 @@ namespace MerchandiseService
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
+                endpoints.MapGrpcService<MerchandiseServiceGrpcService>();
+                endpoints.MapControllers();
             });
         }
     }
